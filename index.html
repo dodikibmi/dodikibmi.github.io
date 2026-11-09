@@ -62,11 +62,14 @@
   .skills { display:flex; flex-wrap:wrap; gap:8px; padding:0; list-style:none; }
   .skills li { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:3px 10px; font-size:.92rem; }
   .date { color:var(--muted); font-size:.85rem; }
+  nav.top { display:flex; justify-content:flex-end; gap:18px; font-size:.95rem; margin:-24px 0 24px; }
   footer { margin-top:56px; color:var(--muted); font-size:.85rem; }
 </style>
 </head>
 <body>
 <main>
+
+<nav class="top"><a href="#projects">Projects</a><a href="#articles">Articles</a><a href="cv.html">CV</a></nav>
 
 <header>
   <h1>Dodik Setyawan</h1>
@@ -77,6 +80,7 @@
   with JSON-over-HTTP integrations in production. I am open to <strong>remote contract work</strong>
   (part-time or project-based): IBM i maintenance and support, RPG modernization, SQL and integration.</p>
   <ul class="links">
+    <li><a href="cv.html"><strong>CV</strong></a></li>
     <li><a href="https://www.linkedin.com/in/dodik-setyawan" rel="me">LinkedIn</a></li>
     <li><a href="https://github.com/dodikibmi" rel="me">GitHub</a></li>
     <li><a href="https://dev.to/dodikibmi" rel="me">Articles on dev.to</a></li>
@@ -85,6 +89,15 @@
 </header>
 
 <section>
+  <h2>What I can help with</h2>
+  <div class="grid">
+    <div class="card"><h3>Maintenance &amp; support</h3><p>Fixing and extending existing RPG, CL and DDS (fixed or free format), finding root causes from job logs, journals and compile listings.</p></div>
+    <div class="card"><h3>Modernization</h3><p>Step by step, without a rewrite: free-format RPG, DDS to SQL, service programs with unit tests, a regression run after each step.</p></div>
+    <div class="card"><h3>SQL &amp; integration</h3><p>Db2 for i SQL and reports, IBM i Services queries, REST and JSON from RPG, data queues, CSV and XML interfaces.</p></div>
+  </div>
+</section>
+
+<section id="projects">
   <h2>Sample projects</h2>
   <p>Built on IBM i 7.5 (<a href="https://pub400.com">PUB400</a>) with fictional data. Every program was compiled and run on a real IBM i, and the results are saved in each repository.</p>
   <div class="grid">
@@ -99,15 +112,17 @@
       <p>A complete green-screen application (subfiles, commitment control, reports) with CI/CD from Git, data queues, CSV/XML, Node.js and Python REST APIs, and an ILE COBOL program calling RPG.</p>
     </div>
     <div class="card">
+      <a href="https://github.com/dodikibmi/ibmi-sql-toolkit"><img src="img/toolkit.png" alt="IBM i SQL toolkit: QSYS2 health, security and performance queries" loading="lazy"></a>
       <h3><a href="https://github.com/dodikibmi/ibmi-sql-toolkit">IBM i SQL Toolkit</a></h3>
       <p>Ready-to-run IBM i Services (QSYS2) SQL for system health, security review and Db2 performance, plus a row and column access control demo.</p>
     </div>
   </div>
 </section>
 
-<section>
+<section id="articles">
   <h2>Articles</h2>
   <ul class="plain">
+    <li><a href="https://dev.to/dodikibmi/service-program-signatures-on-ibm-i-mch4431-prv-and-the-change-that-breaks-nothing-loudly-3fdn">Service program signatures on IBM i: MCH4431, *PRV, and the change that breaks nothing loudly</a> <span class="date">· Nov 2026</span></li>
     <li><a href="https://dev.to/dodikibmi/modernizing-a-legacy-rpg-application-in-five-safe-steps-with-a-regression-run-after-each-one-3j0b">Modernizing a legacy RPG application in five safe steps, with a regression run after each one</a> <span class="date">· Nov 2026</span></li>
     <li><a href="https://dev.to/dodikibmi/calling-rest-apis-from-rpg-without-httpapi-qsys2httpget-jsontable-and-httppost-2kc2">Calling REST APIs from RPG without HTTPAPI: QSYS2.HTTP_GET, JSON_TABLE and HTTP_POST</a> <span class="date">· Nov 2026</span></li>
     <li><a href="https://dev.to/dodikibmi/a-rest-api-on-ibm-i-with-python-and-ibmdb-no-framework-running-in-pase-264n">A REST API on IBM i with Python and ibm_db, no framework, running in PASE</a> <span class="date">· Nov 2026</span></li>
@@ -134,9 +149,10 @@
     <li>Integration with other channels through web services (HTTP, JSON)</li>
     <li>Production support: compile listings, job logs and journals to find and fix problems</li>
   </ul>
+  <p><a href="cv.html">Full CV →</a></p>
 </section>
 
-<footer>© 2026 Dodik Setyawan Handoko · Indonesia</footer>
+<footer>© 2026 Dodik Setyawan Handoko · Indonesia · Updated November 2026</footer>
 </main>
 </body>
 </html>
